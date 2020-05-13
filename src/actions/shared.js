@@ -6,12 +6,12 @@ import { setAuthedUser } from '../actions/authuser'
 const AUTHED_ID = 'dan_abramov'
 
 export function handleInitialData() {
-    return getInitialData().then(
+    return (dispatch) => {
+        return getInitialData().then(
         ({users, tweets}) => {
             dispatch(receiveUsers(users))
             dispatch(receiveTweets(tweets))
             dispatch(setAuthedUser(AUTHED_ID))
-
         }
-    )
+    )}
 }
