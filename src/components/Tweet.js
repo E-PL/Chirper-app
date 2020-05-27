@@ -4,13 +4,15 @@ import { formatTweet, formatDate } from '../utils/helpers'
 import { TiArrowBackOutline, TiHeartOutline, TiHeartFullOutline} from 'react-icons/ti/index'
 
 class Tweet extends Component {
+   
     toParent = ( e, id ) => {
         e.preventDefault()
-
     }
+   
     handleLike = (e) => {
-        e.preventDefault
+        e.preventDefault()
     }
+   
     render() {
         console.log(this.props)
         const { tweet } = this.props
